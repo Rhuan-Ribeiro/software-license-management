@@ -7,7 +7,7 @@ select * from llicenca where month(DtAquisicao) = 5; #Nasci em Maio
 select * from llicenca where year(DtAquisicao) = 2007 and month(DtAquisicao) = 5;
 select idTIPO_Empresa as ID, DescricaoTipo as TIPO, left(DescricaoTipo, 5) as LEFT5 from ltipo_empresa order by DescricaoTipo asc;
 select idTIPO_Empresa as ID, DescricaoTipo as TIPO, right(DescricaoTipo, 5) as RIGHT5 from ltipo_empresa order by DescricaoTipo desc;
-select substr(DescricaoTipo, 6, 10) as LETRAS from ltipo_empresa;
+select substr(DescricaoTipo, 6, 5) as LETRAS from ltipo_empresa;
 select Nome_RazaoSocial as NOME, LENGTH(Nome_RazaoSocial) as bytes from lcliente order by Nome_RazaoSocial asc;
 select NumLicenca as LICENCA, DtAquisicao as DATA, datediff(now(), DtAquisicao) as DIAS_ATRAS from llicenca;
 select upper(NomeSetor) as MAIUSCULO, lower(NomeSetor) as MINUSCULO from lsetor;
